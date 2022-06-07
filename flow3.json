@@ -30,7 +30,7 @@
         "payloadType": "date",
         "x": 120,
         "y": 80,
-        "wires": [
+        "wires": [    
             [
                 "8eb6b907f692ba11"
             ]
