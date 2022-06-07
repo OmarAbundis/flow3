@@ -1,0 +1,302 @@
+[
+    {
+        "id": "6e3adcb4a95e10de",
+        "type": "tab",
+        "label": "Flow3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "73a322d83a661fe7",
+        "type": "inject",
+        "z": "6e3adcb4a95e10de",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 80,
+        "wires": [
+            [
+                "8eb6b907f692ba11"
+            ]
+        ]
+    },
+    {
+        "id": "70e3224bd79ed21d",
+        "type": "inject",
+        "z": "6e3adcb4a95e10de",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 110,
+        "y": 140,
+        "wires": [
+            [
+                "35e03d0191883ba7",
+                "a1dbf830d0e197cd",
+                "2556f00a46f1e0e8"
+            ]
+        ]
+    },
+    {
+        "id": "3b811f1014336dfe",
+        "type": "inject",
+        "z": "6e3adcb4a95e10de",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "5",
+        "payloadType": "num",
+        "x": 110,
+        "y": 200,
+        "wires": [
+            [
+                "35e03d0191883ba7",
+                "a1dbf830d0e197cd",
+                "2556f00a46f1e0e8"
+            ]
+        ]
+    },
+    {
+        "id": "420daa02d748ef4f",
+        "type": "inject",
+        "z": "6e3adcb4a95e10de",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "10",
+        "payloadType": "num",
+        "x": 110,
+        "y": 280,
+        "wires": [
+            [
+                "a1dbf830d0e197cd",
+                "35e03d0191883ba7",
+                "2556f00a46f1e0e8"
+            ]
+        ]
+    },
+    {
+        "id": "8eb6b907f692ba11",
+        "type": "ui_text",
+        "z": "6e3adcb4a95e10de",
+        "group": "432f3c8a087c7c0e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Interfaz básica",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 520,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "35e03d0191883ba7",
+        "type": "ui_gauge",
+        "z": "6e3adcb4a95e10de",
+        "name": "",
+        "group": "a7805b1b5b795a03",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 490,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "a1dbf830d0e197cd",
+        "type": "ui_chart",
+        "z": "6e3adcb4a95e10de",
+        "name": "",
+        "group": "a7805b1b5b795a03",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "1",
+        "ymax": "10",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 490,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2556f00a46f1e0e8",
+        "type": "ui_chart",
+        "z": "6e3adcb4a95e10de",
+        "name": "",
+        "group": "a7805b1b5b795a03",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "1",
+        "ymax": "10",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 490,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "432f3c8a087c7c0e",
+        "type": "ui_group",
+        "name": "FECHA - GRUPO",
+        "tab": "3f9ed2de8e113b20",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a7805b1b5b795a03",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "940b7bbc0422e0bf",
+        "order": 2,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "3f9ed2de8e113b20",
+        "type": "ui_tab",
+        "name": "FECHA EN EL TAB",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "940b7bbc0422e0bf",
+        "type": "ui_tab",
+        "name": "FLOW3 G7 TAB",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    }
+]
